@@ -1,0 +1,49 @@
+<Seal CheckSum="166 77 147 70 72 174 106 216 104 25 237 205 81 171 132 58" CheckSumReadBack="22 212 27 83 85 176 83 175 115 144 198 242 240 29 229 26">
+  <SafetyControllerUserData PSC_Type="Premium" PSC_HWVersion="1.0.0" PSC_ConfigVersion="1.1.0" Date="2018-03-12  13:45:39" ControllerID="SE-L-7235114" UserID="Default User" Pin="3822">
+    <Mechanical_Unit>
+      <Robot Mechanical_Unit_Name="ROB_1" NoOfAxis="6" StartSpdOffset="100">
+        <Robot_Baseframe Pos_X="0" Pos_Y="0" Pos_Z="0" Orient_U0="1" Orient_U1="0" Orient_U2="0" Orient_U3="0" Base="false" />
+        <Robot_ElbowOffset Pos_X="-252" Pos_Y="0" Pos_Z="342.00001" />
+        <Robot_Serial_Number Robot_Serial_Number_High_Part="0000" Robot_Serial_Number_Low_Part="0" />
+        <Joint_Limits>
+          <Joint_Limit JointID="1" Upper_Bound="170.000021" Lower_Bound="-170.000021" />
+          <Joint_Limit JointID="2" Upper_Bound="85.000008" Lower_Bound="-64.99977" />
+          <Joint_Limit JointID="3" Upper_Bound="69.999973" Lower_Bound="-179.999854" />
+          <Joint_Limit JointID="4" Upper_Bound="300.000129" Lower_Bound="-300.000129" />
+          <Joint_Limit JointID="5" Upper_Bound="130.000113" Lower_Bound="-130.000113" />
+          <Joint_Limit JointID="6" Upper_Bound="360.000257" Lower_Bound="-360.000257" />
+        </Joint_Limits>
+      </Robot>
+    </Mechanical_Unit>
+    <Flange_Super_Pose ToolID="0" x_0="0" y_0="0" z_0="0" q_1="1" q_2="0" q_3="0" q_4="0" />
+    <Supervision>
+      <ToolZone_Supervision Stop="STOP1" BrakeEarly="disabled">
+        <Zone ZoneID="1" AllowInside="true" Input_ID="1" VertexCount="4" MaxSpeed="250" IncludeElbow="false">
+          <Dimension_Z Pos_Z_lower="0" Pos_Z_upper="3168.981027" />
+          <Pos PosID="1" Pos_X="4000" Pos_Y="-1000" />
+          <Pos PosID="2" Pos_X="4000" Pos_Y="4000" />
+          <Pos PosID="3" Pos_X="-4000" Pos_Y="4000" />
+          <Pos PosID="4" Pos_X="-4000" Pos_Y="-1000" />
+        </Zone>
+      </ToolZone_Supervision>
+    </Supervision>
+    <SyncCheck Cycle="12" PreWarning="1" DualChannel="true" MaxTimeLimit="600">
+      <SyncPosition JointID="1" JointValue="0" />
+      <SyncPosition JointID="2" JointValue="0" />
+      <SyncPosition JointID="3" JointValue="0" />
+      <SyncPosition JointID="4" JointValue="0" />
+      <SyncPosition JointID="5" JointValue="0" />
+      <SyncPosition JointID="6" JointValue="0" />
+    </SyncCheck>
+    <BrakeCheck Cycle="200" WarningOnly="false" PreWarning="6" MaxSpeed="250" MinExpectedControlError="0.02" MaxAllowedTestTime="100" Standstill_Tol_CBC="2">
+      <Joint JointID="1" Deactivate="false" />
+      <Joint JointID="2" Deactivate="false" />
+      <Joint JointID="3" Deactivate="false" />
+      <Joint JointID="4" Deactivate="false" />
+      <Joint JointID="5" Deactivate="false" />
+      <Joint JointID="6" Deactivate="false" />
+    </BrakeCheck>
+    <Override Allowed="true" />
+    <SafeBrakeRamp Supervision="enabled" />
+  </SafetyControllerUserData>
+</Seal>

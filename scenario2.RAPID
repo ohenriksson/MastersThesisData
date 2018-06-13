@@ -1,0 +1,340 @@
+MODULE Module1
+	CONST robtarget Target_10:=[[2650.778985035,-1514.394022891,665.53670734],[0.237207259,0.063532185,0.962557826,-0.114798994],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_20:=[[3044.708925288,-223.083043607,665.53670734],[0.256719524,-0.150874772,0.952780515,-0.059507803],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_30:=[[2830.995781706,1142.576635519,665.53670734],[0.263526219,-0.362657835,0.893886571,0.000156031],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_40:=[[1941.519398723,2355.954351946,665.53670734],[0.255362535,-0.571733158,0.776965317,0.065085085],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_50:=[[758.480316395,2957.148304315,665.53670734],[0.235112529,-0.726933226,0.634130896,0.119030212],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_60:=[[-1267.010409106,2777.53543763,665.53670734],[0.182049336,-0.896624462,0.355834908,0.190536432],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_70:=[[-2708.612226105,1408.345942114,665.53670734],[0.110083745,-0.963626329,0.044477023,0.239431956],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_80:=[[-3006.534548987,529.875919266,665.53670734],[0.072430236,-0.959197766,-0.102438045,0.253377098],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_1:=[[170.000007007,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_2:=[[143.024262269,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_3:=[[113.3049809,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_4:=[[87.274335878,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_5:=[[48.429291781,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_6:=[[15.425917994,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_7:=[[-5.037431675,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_8:=[[-30.266766578,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_9:=[[-58.818282132,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_10:=[[-77.492415908,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget JointTarget_11:=[[-105.198837588,85,-98.742260129,0.112841515,40.027258121,-22.258237543],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_02:=[[227.295779513,-27.5,0,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_01:=[[170,-27.5,0,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_03:=[[284.591559026,-27.5,0,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_05:=[[227.295779513,10,0,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_04:=[[170,10,0,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_06:=[[284.591559026,10,0,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_08:=[[-170,-65,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_07:=[[-170,-65,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_09:=[[164.374588252,-65,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_011:=[[-170,-65,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_010:=[[-170,-65,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_012:=[[164.374588252,-65,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_014:=[[-170,-65,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_013:=[[-170,-65,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_015:=[[164.374588252,-65,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_017:=[[-170,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_016:=[[-170,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_018:=[[164.374588252,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_020:=[[-170,-27.5,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_019:=[[-170,-27.5,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_021:=[[164.374588252,-27.5,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_023:=[[-170,-27.5,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_022:=[[-170,-27.5,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_024:=[[164.374588252,-27.5,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_026:=[[-170,-27.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_025:=[[-170,-27.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_027:=[[164.374588252,-27.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_029:=[[-170,10,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_028:=[[-170,10,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_030:=[[164.374588252,10,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_032:=[[-168.634045402,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_031:=[[-139.090909091,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_033:=[[163.054803185,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_035:=[[-168.634045402,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_034:=[[-139.090909091,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_036:=[[-167.738798847,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_038:=[[-167.268090805,10,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_037:=[[-108.181818182,10,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_039:=[[-169.058583914,10,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_041:=[[-167.268090805,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_040:=[[-108.181818182,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_042:=[[-169.058583914,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_044:=[[167.57720549,10,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_043:=[[-77.272727273,10,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_045:=[[-162.321149987,10,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_047:=[[167.57720549,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_046:=[[-77.272727273,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_048:=[[-162.321149987,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_050:=[[162.228810926,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_049:=[[-46.363636364,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_051:=[[-163.640935054,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_053:=[[162.228810926,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_052:=[[-46.363636364,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_054:=[[-163.640935054,47.5,-180,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_056:=[[158.223286194,-65,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_055:=[[-15.454545455,-65,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_057:=[[-156.903501127,-65,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_059:=[[158.223286194,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_058:=[[-15.454545455,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_060:=[[-156.903501127,-65,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_062:=[[158.223286194,-27.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_061:=[[-15.454545455,-27.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_063:=[[-156.903501127,-27.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_065:=[[158.223286194,10,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_064:=[[-15.454545455,10,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_066:=[[-156.903501127,10,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_068:=[[-159.118532749,-65,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_067:=[[15.454545455,-65,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_069:=[[169.436952896,-65,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_071:=[[-159.118532749,-27.5,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_070:=[[15.454545455,-27.5,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_072:=[[169.436952896,-27.5,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_074:=[[-159.118532749,-27.5,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_073:=[[15.454545455,-27.5,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_075:=[[169.436952896,-27.5,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_077:=[[-159.118532749,-27.5,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_076:=[[15.454545455,-27.5,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_078:=[[169.436952896,-27.5,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_080:=[[227.295779513,-65,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_079:=[[170,-65,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_081:=[[284.591559026,-65,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_083:=[[227.295779513,-27.5,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_082:=[[170,-27.5,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_084:=[[284.591559026,-27.5,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_086:=[[227.295779513,-27.5,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_085:=[[170,-27.5,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_087:=[[284.591559026,-27.5,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_089:=[[227.295779513,-27.5,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_088:=[[170,-27.5,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_090:=[[284.591559026,-27.5,70,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_092:=[[227.295779513,10,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_091:=[[170,10,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_093:=[[284.591559026,10,-55,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_095:=[[227.295779513,10,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_094:=[[170,10,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_096:=[[284.591559026,10,-23.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_098:=[[227.295779513,10,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_097:=[[170,10,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_099:=[[284.591559026,10,7.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0101:=[[227.295779513,10,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0100:=[[170,10,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0102:=[[284.591559026,10,38.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0104:=[[227.295779513,47.5,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0103:=[[170,47.5,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0105:=[[284.591559026,47.5,-117.5,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0107:=[[227.295779513,47.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0106:=[[170,47.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0108:=[[284.591559026,47.5,-86.25,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0110:=[[227.295779513,85,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0109:=[[170,85,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST jointtarget Target_0111:=[[284.591559026,85,-148.75,0,30,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+
+	PROC Path_10()
+	    MoveJ Target_10,v3000,z100,MyNewTool\WObj:=wobj0;
+	    MoveJ Target_20,v3000,z100,MyNewTool\WObj:=wobj0;
+	    MoveJ Target_30,v3000,z100,MyNewTool\WObj:=wobj0;
+	    MoveJ Target_40,v3000,z100,MyNewTool\WObj:=wobj0;
+	    MoveJ Target_50,v3000,z100,MyNewTool\WObj:=wobj0;
+		MoveJ Target_60,v3000,z100,MyNewTool\WObj:=wobj0;
+		MoveJ Target_70,v3000,z100,MyNewTool\WObj:=wobj0;
+		MoveJ Target_80,v3000,z100,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_1,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_2,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_3,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_4,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_5,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_6,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_7,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_8,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_9,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_10,v3000,z200,MyNewTool\WObj:=wobj0;
+		MoveAbsJ JointTarget_11,v3000,z200,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision0path()
+	    MoveAbsJ Target_02,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_01,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+		MoveAbsJ Target_03,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision1path()
+	    MoveAbsJ Target_05,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_04,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_06,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision2path()
+	    MoveAbsJ Target_08,v2000,z100,tool0\WObj:=wobj0;
+	    MoveAbsJ Target_07,v2000,z100,tool0\WObj:=wobj0;
+	    MoveAbsJ Target_09,v2000,z100,tool0\WObj:=wobj0;
+	ENDPROC
+	PROC collision3path()
+	    MoveAbsJ Target_011,v1000,z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_010,v1000,z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_012,v1000,z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision4path()
+	    MoveAbsJ Target_014,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_013,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_015,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision5path()
+	    MoveAbsJ Target_017,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_016,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+		MoveAbsJ Target_018,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision6path()
+	    MoveAbsJ Target_020,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_019,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+		MoveAbsJ Target_021,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision7path()
+	    MoveAbsJ Target_023,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_022,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+		MoveAbsJ Target_024,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision8path()
+	    MoveAbsJ Target_026,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_025,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_027,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision9path()
+	    MoveAbsJ Target_029,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_028,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+		MoveAbsJ Target_030,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision10path()
+	    MoveAbsJ Target_032,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_031,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_033,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision11path()
+	    MoveAbsJ Target_035,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_034,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_036,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision12path()
+	    MoveAbsJ Target_038,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_037,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_039,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision13path()
+	    MoveAbsJ Target_041,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_040,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_042,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision14path()
+	    MoveAbsJ Target_044,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_043,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_045,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision15path()
+	    MoveAbsJ Target_047,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_046,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_048,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision16path()
+	    MoveAbsJ Target_050,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_049,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_051,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision17path()
+	    MoveAbsJ Target_053,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_052,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_054,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision18path()
+	    MoveAbsJ Target_056,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_055,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_057,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision19path()
+	    MoveAbsJ Target_059,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_058,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_060,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision20path()
+	    MoveAbsJ Target_062,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_061,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_063,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision21path()
+	    MoveAbsJ Target_065,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_064,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_066,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision22path()
+	    MoveAbsJ Target_068,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_067,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_069,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision23path()
+	    MoveAbsJ Target_071,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_070,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_072,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision24path()
+	    MoveAbsJ Target_074,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_073,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_075,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision25path()
+	    MoveAbsJ Target_077,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_076,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_078,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision26path()
+	    MoveAbsJ Target_080,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_079,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_081,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision27path()
+	    MoveAbsJ Target_083,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_082,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_084,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision28path()
+	    MoveAbsJ Target_086,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_085,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_087,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision29path()
+	    MoveAbsJ Target_089,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_088,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_090,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision30path()
+	    MoveAbsJ Target_092,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_091,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_093,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision31path()
+	    MoveAbsJ Target_095,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_094,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_096,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision32path()
+	    MoveAbsJ Target_098,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_097,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_099,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision33path()
+	    MoveAbsJ Target_0101,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0100,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0102,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision34path()
+	    MoveAbsJ Target_0104,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0103,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0105,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision35path()
+	    MoveAbsJ Target_0107,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0106,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0108,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+	PROC collision36path()
+	    MoveAbsJ Target_0110,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0109,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	    MoveAbsJ Target_0111,[6000, 5000, 5000, 5000],z100,MyNewTool\WObj:=wobj0;
+	ENDPROC
+
+ENDMODULE

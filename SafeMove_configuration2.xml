@@ -1,0 +1,116 @@
+<SafetyConfiguration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" version="1.02.01" xmlns="urn:abb-robotics-safety-controller-configuration">
+  <ConfigurationSeal checksum="651ABA916E6CFF98F18E45564470CF968C43F2602EC7F8D2C43AB3D8373E5623" checksumShort="A793BAB7" creationDate="2018-04-24T18:07:32.1362625+02:00" createdBy="Default User" systemName="IRB_6700_300kg_2.70m" swVersion="1.02.02">
+    <ProtectedElements checksum="F1945CD6C19E56B3C1C78943EF5EC18116907A4CA1EFC40A57D48AB1DB7ADFC5" />
+    <SiosCfg version="1.2">
+      <Signal name="SafetyEnable" type="BOOL" default="1" visible="true" readonly="false" />
+      <Signal name="AutomaticMode" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="ManualMode" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="ManualFullSpeedMode" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="DriveEnable" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="DriveEnableFeedback" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="LocalEmergencyStopStatus" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="ExternalPowerControlActive" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="ExternalPowerControlFeedback" type="BOOL" default="0" visible="true" readonly="false" />
+      <Signal name="AutoIn" type="BOOL" default="0" visible="false" readonly="true" />
+      <Signal name="ManualIn" type="BOOL" default="0" visible="false" readonly="true" />
+      <Signal name="ManualFSIn" type="BOOL" default="0" visible="false" readonly="true" />
+      <FuncIOMappings>
+        <AutomaticMode signalName="AutomaticMode" mandatory="true" visible="true" />
+        <AutoIn signalName="AutoIn" mandatory="true" visible="false" />
+        <DriveEnable signalName="DriveEnable" mandatory="true" visible="true" />
+        <LocalEmergencyStopStatus signalName="LocalEmergencyStopStatus" mandatory="true" visible="true" />
+        <ManualMode signalName="ManualMode" mandatory="true" visible="true" />
+        <ManualIn signalName="ManualIn" mandatory="true" visible="false" />
+        <ManualFullSpeedMode signalName="ManualFullSpeedMode" mandatory="true" visible="true" />
+        <ManualFSIn signalName="ManualFSIn" mandatory="true" visible="false" />
+        <SafetyEnable signalName="SafetyEnable" mandatory="true" visible="true" />
+        <ExternalPowerControlActive signalName="ExternalPowerControlActive" mandatory="true" visible="true" />
+        <ExternalPowerControlFeedback signalName="ExternalPowerControlFeedback" mandatory="true" visible="true" />
+        <DriveEnableFeedback signalName="DriveEnableFeedback" mandatory="true" visible="true" />
+      </FuncIOMappings>
+      <Net name="Feedback">
+        <Device name="SC_Feedback_Dev" inSizeBits="0" outSizeBits="2048" address="" visible="true" readonly="false">
+          <Signal name="SafetyEnable" type="BOOL" default="1" offset="0" width="1" direction="output" />
+          <Signal name="AutomaticMode" type="BOOL" default="0" offset="1" width="1" direction="output" />
+          <Signal name="ManualMode" type="BOOL" default="0" offset="2" width="1" direction="output" />
+          <Signal name="ManualFullSpeedMode" type="BOOL" default="0" offset="3" width="1" direction="output" />
+          <Signal name="DriveEnable" type="BOOL" default="0" offset="4" width="1" direction="output" />
+          <Signal name="DriveEnableFeedback" type="BOOL" default="0" offset="5" width="1" direction="output" />
+          <Signal name="LocalEmergencyStopStatus" type="BOOL" default="0" offset="6" width="1" direction="output" />
+          <Signal name="ExternalPowerControlActive" type="BOOL" default="0" offset="7" width="1" direction="output" />
+          <Signal name="ExternalPowerControlFeedback" type="BOOL" default="0" offset="8" width="1" direction="output" />
+        </Device>
+      </Net>
+      <Net name="SafeLocalIO">
+        <Device name="SafeLocalIODev" inSizeBits="6" outSizeBits="2" address="" visible="false" readonly="true">
+          <FuncIO name="AutoIn" direction="input" visible="false" readonly="true" offset="0" width="1" />
+          <FuncIO name="ManualIn" direction="input" visible="false" readonly="true" offset="1" width="1" />
+          <FuncIO name="ManualFSIn" direction="input" visible="false" readonly="true" offset="2" width="1" />
+          <FuncIO name="DriveEnableFeedback" direction="input" visible="false" readonly="true" offset="3" width="1" />
+          <FuncIO name="LocalEmergencyStopStatus" direction="input" visible="false" readonly="true" offset="4" width="1" />
+          <FuncIO name="ExternalPowerControlFeedback" direction="input" visible="false" readonly="true" offset="5" width="1" />
+          <FuncIO name="DriveEnable" direction="output" visible="false" readonly="true" offset="0" width="1" />
+          <FuncIO name="ExternalPowerControlActive" direction="output" visible="false" readonly="true" offset="1" width="1" />
+        </Device>
+      </Net>
+    </SiosCfg>
+    <ClCfg version="1.2">
+      <Operators />
+      <PreLogic />
+      <PostLogic />
+    </ClCfg>
+    <SystemCfg version="1.0">
+      <FuncIO name="AutomaticMode" direction="input" />
+      <FuncIO name="CommissioningModeActive" direction="input" />
+      <FuncIO name="ConfigurationLocked" direction="input" />
+      <FuncIO name="DriveEnable" direction="input" />
+      <FuncIO name="ExternalPowerControlActive" direction="input" />
+      <FuncIO name="ExtComShutdownReq" direction="input" />
+      <FuncIO name="ManualMode" direction="input" />
+      <FuncIO name="ManualFullSpeedMode" direction="input" />
+      <FuncIO name="SafetyControllerOperational" direction="input" />
+      <FuncIO name="ServiceModeActive" direction="input" />
+      <FuncIO name="Stop0Status" direction="input" />
+      <FuncIO name="Stop1Status" direction="input" />
+      <FuncIO name="Stop0Status" direction="input" />
+      <FuncIO name="Stop1Status" direction="input" />
+      <FuncIO name="SafetyControllerOperational" direction="input" />
+      <FuncIO name="ServiceModeActive" direction="input" />
+      <FuncIO name="CommissioningModeActive" direction="input" />
+      <FuncIO name="ConfigurationLocked" direction="input" />
+      <FuncIO name="ExtComShutdownReq" direction="input" />
+      <FuncIO name="ExtComShutdownAck" direction="output" />
+    </SystemCfg>
+    <SafetyCfg version="1.0">
+      <DriveModuleConfiguration driveModuleId="1" maxSpeedManualMode="0.25">
+        <Robot name="ROB_1" startSpeedOffset="0.1">
+          <Baseframe>
+            <Translation x="0" y="0" z="0" />
+            <Quaternion q1="1" q2="0" q3="0" q4="0" />
+          </Baseframe>
+          <ElbowOffset x="-0.268" y="0" z="0.375" />
+          <Joint id="1" calPosition="0" />
+          <Joint id="2" calPosition="0" />
+          <Joint id="3" calPosition="0" />
+          <Joint id="4" calPosition="0" />
+          <Joint id="5" calPosition="0" />
+          <Joint id="6" calPosition="0" />
+        </Robot>
+        <SyncCheck>
+          <SyncPosition jointId="1" positionValue="0" />
+          <SyncPosition jointId="2" positionValue="0" />
+          <SyncPosition jointId="3" positionValue="0" />
+          <SyncPosition jointId="4" positionValue="0" />
+          <SyncPosition jointId="5" positionValue="0" />
+          <SyncPosition jointId="6" positionValue="0" />
+        </SyncCheck>
+        <SafeZone id="1" name="Safe_Zone" top="4.593386" bottom="0" speedLimitPriority="NORMAL">
+          <Point x="-3.876582" y="0" />
+          <Point x="2.676161" y="0" />
+          <Point x="2.795743" y="3.266541" />
+          <Point x="-3.693634" y="3.346713" />
+        </SafeZone>
+      </DriveModuleConfiguration>
+    </SafetyCfg>
+  </ConfigurationSeal>
+</SafetyConfiguration>
